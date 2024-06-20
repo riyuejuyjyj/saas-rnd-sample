@@ -10,7 +10,7 @@ def home_page_view(request,*args,**kwargs):
         "page_title": my_title,
         "querycount": queryset.count()
     }
-    # 创建了一个新的访问记录
+    # 创建了一个新的访
     PageVisit.objects.create(path = request.path)
     return render(request,"home.html",my_context)
     
